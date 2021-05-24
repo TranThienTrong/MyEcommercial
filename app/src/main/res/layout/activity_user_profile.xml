@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activities.UserProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/auth_screens_background"
+        app:layout_constraintBottom_toTopOf="@id/scrollView_user_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar_user_profile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/img_avatar_user_profile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="15dp"
+                android:src="@drawable/ic_default_avatar"
+                >
+
+
+
+            </ImageView>
+
+            <com.patecan.myecommercial.Util.CustomUI.CustomEditText
+                android:id="@+id/et_first_name_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:hint="First Name" />
+
+            <com.patecan.myecommercial.Util.CustomUI.CustomEditText
+                android:id="@+id/et_last_name_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:hint="Last Name" />
+
+            <com.patecan.myecommercial.Util.CustomUI.CustomEditText
+                android:id="@+id/et_email_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:hint="Email" />
+
+            <com.patecan.myecommercial.Util.CustomUI.CustomEditText
+                android:id="@+id/et_mobile_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:hint="Phone" />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal">
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomRadioButton
+                    android:id="@+id/radioBtn_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/drawable_gender_selector"
+                    android:text="Male" />
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomRadioButton
+                    android:id="@+id/radioBtn_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/drawable_gender_selector"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <com.patecan.myecommercial.Util.CustomUI.CustomButton
+                android:id="@+id/btn_save_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/auth_screens_background"
+                android:text="Save"
+                android:layout_marginVertical="15dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activities.CartListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/auth_screens_background"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_cart_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Cart List"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cart_list_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar_cart_list" Of="parent">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cart_list_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_cart_list">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="------Cart Detail------"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomTextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Total"
+                    android:textStyle="bold" />
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomTextView
+                    android:id="@+id/tv_cart_list_info_subtotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomTextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Charge"
+                    android:textStyle="bold" />
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomTextView
+                    android:id="@+id/tv_cart_list_info_shipping_charge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomTextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount"
+                    android:textStyle="bold" />
+
+                <com.patecan.myecommercial.Util.CustomUI.CustomTextView
+                    android:id="@+id/tv_cart_list_info_total_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_go_to_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="20dp"
+                android:text="Checkout"
+                android:textColor="@color/white"
+                android:background="@drawable/auth_screens_background"
+                android:src="@drawable/ic_cart_24" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

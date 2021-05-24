@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "936526301303",
+    "project_id": "myshoppal-cb814",
+    "storage_bucket": "myshoppal-cb814.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936526301303:android:37c1a91650bb93c33f9e72",
+        "android_client_info": {
+          "package_name": "com.patecan.myecommercial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936526301303-5uch53rf6emejmq20h3gvtqhjuikvsbs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.patecan.myecommercial",
+            "certificate_hash": "eb5ccc3f0a1533a502359052e9ceedf99602cec5"
+          }
+        },
+        {
+          "client_id": "936526301303-i7tqgf7u4qvc8tcvq9kehsgg55t1nov2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ2CZ3owpqP3GN_kpCz56yZIcZVziLevw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936526301303-i7tqgf7u4qvc8tcvq9kehsgg55t1nov2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

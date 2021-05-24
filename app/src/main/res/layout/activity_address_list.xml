@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activities.AddressListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/auth_screens_background"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Address Book"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.patecan.myecommercial.Util.CustomUI.CustomButton
+        android:id="@+id/btn_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/boder_background"
+        android:drawableStart="@drawable/ic_add_location_24"
+        android:text="Add Address"
+        android:textColor="@color/pink"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_address_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar_address_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_address">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
